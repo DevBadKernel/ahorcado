@@ -1,0 +1,98 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin: 0px;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(images/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#derecha{
+    background-image: url(images/Poster.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 500px;
+}
+
+#izquierda{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    height:700px;
+    width:600px;
+}
+
+#palabra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 20px;
+    background-color: burlywood;
+    height: 100px;
+    width: 600px;
+    letter-spacing: 10px;
+}
+
+.teclado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.letras{
+    font-size: large;
+    font-weight: bold ;
+    border: 2px black solid;
+    border-radius: 20px;
+    text-align: center;
+    background-color: burlywood;
+    transition:all 1s ease;
+    height: 60px;
+    width: 60px;
+    margin:5px;
+}
+
+.letras:hover{
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px rgb(172, 49, 49);
+    transition: all 0.5s ease;
+}
+
+.letras:disabled{
+    color: rgb(247, 7, 7);
+    background-color: antiquewhite;
+    box-shadow: none;
+    transition: none;
+}
+
+.ahorcado{
+    height: 400px;
+}
+
+#finalPartida{
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color:burlywood;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 1200px;
+    height: 200px;
+}
+
+
