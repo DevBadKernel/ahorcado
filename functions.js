@@ -11,6 +11,17 @@ const palabras = ['Aprendizaje','Secreto','Besar','Maldito','Llave','Situacion',
 'Encontrar','Manzana','Encajar','Absorbible','Gobernar','Efusivo','Espiritual','Herida','Clasificar','Cordon',
 'Cientifico','Ingenieria'];
 
+var letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o"];
+$(document).ready(function(){
+    letras.forEach((letra)=>{
+        $(".teclado").append(`<button id="${letra}" class="letras">${letra}</button>`)
+    })
+    $(".letras").click(function(){
+        const valor=$(this).text();
+        jugada(valor);
+    })
+})
+
 var palElegida = '';
 var estadoPal = [];
 var vidas = -1;
@@ -33,6 +44,7 @@ function jugada(letra){
     for (i = 0; i<palElegida.length; i++){
         if (palElegida[i] === letra){
             estadoPal[i] = letra;
+            
             document.getElementById("palabra").innerHTML=estadoPal.join("");
             letraEncontrada = true;
     }
